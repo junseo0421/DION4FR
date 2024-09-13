@@ -323,7 +323,7 @@ if __name__ == '__main__':
     config['TRAIN.USE_CHECKPOINT'] = False
 
     ## 2023 11 08 class-wise하게 8:2로 나눠줌
-    base_dir = '/content/Colab_dataset'
+    base_dir = '/content'
     HKdb_dir = 'HK-db/HKdb_1'
     SDdb_dir = 'SD-db/SDdb_1'
 

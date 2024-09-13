@@ -267,9 +267,9 @@ def valid(gen, dis, opt_gen, opt_dis, epoch, valid_loader, writer):
 
 if __name__ == '__main__':
 
-    SAVE_WEIGHT_DIR = r'D:\DION4FR\mask_change\output\HKdb-2\checkpoints'
-    SAVE_LOG_DIR = r'D:\DION4FR\mask_change\output\HKdb-2\logs_all'
-    LOAD_WEIGHT_DIR = r'D:\DION4FR\mask_change\output\HKdb-2\checkpoints'
+    SAVE_WEIGHT_DIR = r'G:\내 드라이브\DION4FR\output\HKdb-2\checkpoints'
+    SAVE_LOG_DIR = r'G:\내 드라이브\DION4FR\output\HKdb-2\logs_all'
+    LOAD_WEIGHT_DIR = r'G:\내 드라이브\DION4FR\output\HKdb-2\checkpoints'
     TRAIN_DATA_DIR = ''
 
     seed_everything(2024)  # Seed 고정
@@ -283,7 +283,7 @@ if __name__ == '__main__':
         parser.add_argument('--epochs', type=int, help='number of epoches', default=2000)
         parser.add_argument('--lr', type=float, help='learning rate', default=0.0004)
         parser.add_argument('--alpha', type=float, help='learning rate decay for discriminator', default=0.1)
-        parser.add_argument('--load_pretrain', type=bool, help='load pretrain weight', default=True)
+        parser.add_argument('--load_pretrain', type=bool, help='load pretrain weight', default=False)
         parser.add_argument('--test_flag', type=bool, help='testing while training', default=False)
         parser.add_argument('--adjoint', type=bool, help='if use adjoint in odenet', default=True)
 
@@ -323,9 +323,9 @@ if __name__ == '__main__':
     config['TRAIN.USE_CHECKPOINT'] = False
 
     ## 2023 11 08 class-wise하게 8:2로 나눠줌
-    base_dir = r'C:\Users\8138\Desktop\SD&HK finger-vein DB'
-    HKdb_dir = r'HK-db\HKdb_2'
-    SDdb_dir = r'SD-db\SDdb_1'
+    base_dir = '/content/Colab_dataset'
+    HKdb_dir = 'HK-db/HKdb_1'
+    SDdb_dir = 'SD-db/SDdb_1'
 
     # 각 서브 폴더의 경로를 설정
     original_dir = join(base_dir, 'original_images_split', HKdb_dir)

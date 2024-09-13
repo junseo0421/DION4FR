@@ -267,9 +267,9 @@ def valid(gen, dis, opt_gen, opt_dis, epoch, valid_loader, writer):
 
 if __name__ == '__main__':
 
-    SAVE_WEIGHT_DIR = '/content/drive/MyDrive/output/HKdb-2/checkpoints'
-    SAVE_LOG_DIR = 'content/drive/MyDrive/output/HKdb-2/logs_all'
-    LOAD_WEIGHT_DIR = 'content/drive/MyDrive/output/HKdb-2/checkpoints'
+    SAVE_WEIGHT_DIR = '/content/drive/MyDrive/output/HKdb-1/checkpoints'
+    SAVE_LOG_DIR = 'content/drive/MyDrive/output/HKdb-1/logs_all'
+    LOAD_WEIGHT_DIR = 'content/drive/MyDrive/output/HKdb-1/checkpoints'
     TRAIN_DATA_DIR = ''
 
     seed_everything(2024)  # Seed 고정

@@ -130,7 +130,7 @@ class dataset_norm(Dataset):
         mask_img_tensor = torch.tensor(mask_img, dtype=torch.float32)
 
         # 저장할 경로 설정
-        save_dir = r'G:\내 드라이브\DION4FR\output\HKdb-1\mask_images'  # 저장할 디렉토리 경로를 설정
+        save_dir = '/content/drive/MyDrive/DION4FR/output/HKdb-1/mask_images'  # 저장할 디렉토리 경로를 설정
         os.makedirs(save_dir, exist_ok=True)  # 디렉토리가 없으면 생성
 
         # 파일 이름 구성 및 저장

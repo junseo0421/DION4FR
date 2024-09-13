@@ -140,20 +140,20 @@ def train(gen, dis, opt_gen, opt_dis, epoch, train_loader, writer):
             ))
 
     ## Tensor board
-    writer.add_scalars('train/generator_loss',
+    writer.add_scalar('train/generator_loss',
                        {'Pixel Reconstruction Loss': acc_pixel_rec_loss / len(train_loader.dataset)}, epoch)
-    writer.add_scalars('train/generator_loss', {'Texture Consistency Loss': acc_mrf_loss / len(train_loader.dataset)},
+    writer.add_scalar('train/generator_loss', {'Texture Consistency Loss': acc_mrf_loss / len(train_loader.dataset)},
                        epoch)
-    writer.add_scalars('train/generator_loss',
+    writer.add_scalar('train/generator_loss',
                        {'Feature Reconstruction Loss': acc_feat_rec_loss / len(train_loader.dataset)}, epoch)
     # writer.add_scalars('train/generator_loss', {'Feature Consistency Loss': acc_feat_cons_loss / len(train_loader.dataset)}, epoch)
-    writer.add_scalars('train/generator_loss', {'Adversarial Loss': acc_gen_adv_loss / len(train_loader.dataset)},
+    writer.add_scalar('train/generator_loss', {'Adversarial Loss': acc_gen_adv_loss / len(train_loader.dataset)},
                        epoch)
-    writer.add_scalars('train/SSIM_loss', {'total gen Loss': acc_ssim_loss / len(train_loader.dataset)},
+    writer.add_scalar('train/SSIM_loss', {'total gen Loss': acc_ssim_loss / len(train_loader.dataset)},
                        epoch)
-    writer.add_scalars('train/total_gen_loss', {'total gen Loss': total_gen_loss / len(train_loader.dataset)},
+    writer.add_scalar('train/total_gen_loss', {'total gen Loss': total_gen_loss / len(train_loader.dataset)},
                        epoch)
-    writer.add_scalars('train/discriminator_loss', {'Adversarial Loss': acc_dis_adv_loss / len(train_loader.dataset)},
+    writer.add_scalar('train/discriminator_loss', {'Adversarial Loss': acc_dis_adv_loss / len(train_loader.dataset)},
                        epoch)
 
 
@@ -247,22 +247,22 @@ def valid(gen, dis, opt_gen, opt_dis, epoch, valid_loader, writer):
 
 
     ## Tensor board
-    writer.add_scalars('valid/generator_loss',
+    writer.add_scalar('valid/generator_loss',
                        {'Pixel Reconstruction Loss': acc_pixel_rec_loss / len(valid_loader.dataset)}, epoch)
-    writer.add_scalars('valid/generator_loss', {'Texture Consistency Loss': acc_mrf_loss / len(valid_loader.dataset)},
+    writer.add_scalar('valid/generator_loss', {'Texture Consistency Loss': acc_mrf_loss / len(valid_loader.dataset)},
                        epoch)
-    writer.add_scalars('valid/generator_loss',
+    writer.add_scalar('valid/generator_loss',
                        {'Feature Reconstruction Loss': acc_feat_rec_loss / len(valid_loader.dataset)}, epoch)
     # writer.add_scalars('train/generator_loss', {'Feature Consistency Loss': acc_feat_cons_loss / len(train_loader.dataset)}, epoch)
-    writer.add_scalars('valid/generator_loss', {'Adversarial Loss': acc_gen_adv_loss / len(valid_loader.dataset)},
+    writer.add_scalar('valid/generator_loss', {'Adversarial Loss': acc_gen_adv_loss / len(valid_loader.dataset)},
                        epoch)
 
-    writer.add_scalars('valid/SSIM_loss', {'total gen Loss': acc_ssim_loss / len(valid_loader.dataset)},
+    writer.add_scalar('valid/SSIM_loss', {'total gen Loss': acc_ssim_loss / len(valid_loader.dataset)},
                        epoch)
-    writer.add_scalars('valid/total_gen_loss', {'total gen Loss': total_gen_loss / len(valid_loader.dataset)},
+    writer.add_scalar('valid/total_gen_loss', {'total gen Loss': total_gen_loss / len(valid_loader.dataset)},
                        epoch)
 
-    writer.add_scalars('valid/discriminator_loss', {'Adversarial Loss': acc_dis_adv_loss / len(valid_loader.dataset)},
+    writer.add_scalar('valid/discriminator_loss', {'Adversarial Loss': acc_dis_adv_loss / len(valid_loader.dataset)},
                        epoch)
 
 if __name__ == '__main__':

@@ -126,8 +126,8 @@ class dataset_norm(Dataset):
         mask_img = np.ones((3, self.imgSize, self.imgSize))
         mask_img[:, :, i:i + self.inputsize] = iner_img
 
-        # 텐서로 변환하여 저장
-        mask_img_tensor = torch.tensor(mask_img, dtype=torch.float32)
+        # # 텐서로 변환하여 저장
+        # mask_img_tensor = torch.tensor(mask_img, dtype=torch.float32)
 
         # # 저장할 경로 설정
         # save_dir = r'D:\DION4FR\mask_change\output\HKdb-2\mask_images'  # 저장할 디렉토리 경로를 설정

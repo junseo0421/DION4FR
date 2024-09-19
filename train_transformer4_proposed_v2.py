@@ -411,10 +411,10 @@ if __name__ == '__main__':
 
     # Load pre-trained weight
     if args.load_pretrain:
-        start_epoch = 780
+        start_epoch = 990
         print(f'Loading model weight...at epoch {start_epoch}')
-        gen.load_state_dict(torch.load(join(args.load_weight_dir, 'Gen_former_780.pt')))
-        dis.load_state_dict(torch.load(join(args.load_weight_dir, 'Dis_former_780.pt')))
+        gen.load_state_dict(torch.load(join(args.load_weight_dir, 'Gen_former_990.pt')))
+        dis.load_state_dict(torch.load(join(args.load_weight_dir, 'Dis_former_990.pt')))
     else:
         start_epoch = 0
 

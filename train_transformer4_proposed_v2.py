@@ -267,9 +267,9 @@ def valid(gen, dis, opt_gen, opt_dis, epoch, valid_loader, writer):
 
 if __name__ == '__main__':
 
-    SAVE_WEIGHT_DIR = '/content/drive/MyDrive/output/HKdb-1/checkpoints'
-    SAVE_LOG_DIR = '/content/drive/MyDrive/output/HKdb-1/logs_all'
-    LOAD_WEIGHT_DIR = '/content/drive/MyDrive/output/HKdb-1/checkpoints'
+    SAVE_WEIGHT_DIR = '/content/drive/MyDrive/output/SDdb-1/checkpoints'
+    SAVE_LOG_DIR = '/content/drive/MyDrive/output/SDdb-1/logs_all'
+    LOAD_WEIGHT_DIR = '/content/drive/MyDrive/output/SDdb-1/checkpoints'
     TRAIN_DATA_DIR = ''
 
     seed_everything(2024)  # Seed 고정
@@ -283,7 +283,7 @@ if __name__ == '__main__':
         parser.add_argument('--epochs', type=int, help='number of epoches', default=2000)
         parser.add_argument('--lr', type=float, help='learning rate', default=0.0004)
         parser.add_argument('--alpha', type=float, help='learning rate decay for discriminator', default=0.1)
-        parser.add_argument('--load_pretrain', type=bool, help='load pretrain weight', default=True)
+        parser.add_argument('--load_pretrain', type=bool, help='load pretrain weight', default=False)
         parser.add_argument('--test_flag', type=bool, help='testing while training', default=False)
         parser.add_argument('--adjoint', type=bool, help='if use adjoint in odenet', default=True)
 
@@ -328,9 +328,9 @@ if __name__ == '__main__':
     SDdb_dir = 'SD-db/SDdb_1'
 
     # 각 서브 폴더의 경로를 설정
-    original_dir = join(base_dir, 'original_images_split', HKdb_dir)
-    mask_dir = join(base_dir, 'mask_images_split_con', HKdb_dir)
-    clahe_dir = join(base_dir, 'clahe_images_split', HKdb_dir)
+    original_dir = join(base_dir, 'original_images_split', SDdb_dir)
+    mask_dir = join(base_dir, 'mask_images_split_con', SDdb_dir)
+    clahe_dir = join(base_dir, 'clahe_images_split', SDdb_dir)
 
     # 각 디렉토리가 존재하는지 확인
     assert os.path.isdir(original_dir), f"Original directory does not exist: {original_dir}"

@@ -126,17 +126,17 @@ class dataset_norm(Dataset):
         mask_img = np.ones((3, self.imgSize, self.imgSize))
         mask_img[:, :, i:i + self.inputsize] = iner_img
 
-        # # 텐서로 변환하여 저장
-        # mask_img_tensor = torch.tensor(mask_img, dtype=torch.float32)
+        # 텐서로 변환하여 저장
+        mask_img_tensor = torch.tensor(mask_img, dtype=torch.float32)
 
-        # # 저장할 경로 설정
-        # save_dir = '/content/drive/MyDrive/output/HKdb-1/mask_images'  # 저장할 디렉토리 경로를 설정
-        # os.makedirs(save_dir, exist_ok=True)  # 디렉토리가 없으면 생성
+        # 저장할 경로 설정
+        save_dir = '/content/drive/MyDrive/output/SDdb-1/mask_images'  # 저장할 디렉토리 경로를 설정
+        os.makedirs(save_dir, exist_ok=True)  # 디렉토리가 없으면 생성
 
-        # # 파일 이름 구성 및 저장
-        # file_name = f'mask_image_{index}.png'
-        # file_path = os.path.join(save_dir, file_name)
-        # save_image(mask_img_tensor, file_path)
+        # 파일 이름 구성 및 저장
+        file_name = f'mask_image_{index}.png'
+        file_path = os.path.join(save_dir, file_name)
+        save_image(mask_img_tensor, file_path)
 
         return img, mask_img
 

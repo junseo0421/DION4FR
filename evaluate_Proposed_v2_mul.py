@@ -66,8 +66,8 @@ def evaluate(gen, eval_loader, rand_pair, save_dir):
 
 if __name__ == '__main__':
 
-    TEST_DATA_DIR = 'datasets/HKPU_A_CROP_W25P_V2'
-    SAVE_DIR = r'D:\DION4FR\mask_change\output\HKdb-2\test_result'
+    TEST_DATA_DIR = '/content/HKPU_A_CROP_W25P_V2'
+    SAVE_DIR = '/content/drive/MyDrive/output/SDdb-1/test_result'
 
 
     def get_args():
@@ -107,7 +107,7 @@ if __name__ == '__main__':
     }
 
     # List of epochs to test
-    epoch_list = list(range(410, 450, 10))
+    epoch_list = list(range(200, 550, 50))
 
     # Load data
     print('Loading data...')

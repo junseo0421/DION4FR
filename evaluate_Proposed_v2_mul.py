@@ -66,7 +66,7 @@ def evaluate(gen, eval_loader, rand_pair, save_dir):
 
 if __name__ == '__main__':
 
-    TEST_DATA_DIR = '/content/HKPU_A_CROP_W25P_V2'
+    TEST_DATA_DIR = '/content/SDU_B_original_CROP_W25P_V2'
     SAVE_DIR = '/content/drive/MyDrive/output/SDdb-1/test_result'
 
 

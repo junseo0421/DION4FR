@@ -66,8 +66,8 @@ def evaluate(gen, eval_loader, rand_pair, save_dir):
 
 if __name__ == '__main__':
 
-    TEST_DATA_DIR = '/content/SDU_B_original_CROP_W25P_V2'
-    SAVE_DIR = '/content/drive/MyDrive/output/SDdb-1/test_result'
+    TEST_DATA_DIR = '/content/SDU_B_original_CROP_W25P_V2'  # 24.09.23 SDdb-1
+    SAVE_DIR = '/content/drive/MyDrive/output/SDdb-1/test_result'  # 24.09.23 SDdb-1
 
 
     def get_args():
@@ -107,7 +107,7 @@ if __name__ == '__main__':
     }
 
     # List of epochs to test
-    epoch_list = list(range(200, 550, 50))
+    epoch_list = list(range(200, 550, 50))  # 24.09.23 SDdb-1
 
     # Load data
     print('Loading data...')
@@ -119,7 +119,7 @@ if __name__ == '__main__':
 
     for epoch in epoch_list:
         # Construct weight path and save directory based on the epoch
-        load_weight_dir = f'D:/DION4FR/mask_change/output/HKdb-2/checkpoints/Gen_former_{epoch}.pt'
+        load_weight_dir = f'/content/drive/MyDrive/output/SDdb-1/checkpoints/Gen_former_{epoch}.pt'  # 24.09.23 SDdb-1
         save_dir_epoch = join(SAVE_DIR, f'epoch_{epoch}')
 
         # Create save directory if not exists
